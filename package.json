@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node --use_strict server.js",
-    "go": "npm-run-all --parallel dev-server",
+    "go": "npm-run-all --parallel dev-server build-dist",
     "dev-server": "NODE_ENV=development nodemon server.js --ignore node_modules/ --ignore src-client/ --ignore dist",
     "webpack-watcher": "webpack --progress --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -40,12 +40,13 @@
     "copy-webpack-plugin": "4.0.1",
     "css-loader": "0.26.1",
     "extract-text-webpack-plugin": "2.0.0-beta.5",
+    "file-loader": "^0.10.1",
     "node-sass": "4.5.0",
     "nodemon": "1.11.0",
     "npm-run-all": "4.0.1",
     "prompt": "1.0.0",
-    "sass-loader": "5.0.1",
     "resolve-url-loader": "2.0.0",
+    "sass-loader": "5.0.1",
     "style-loader": "0.13.1",
     "webpack": "2.2.1",
     "webpack-dev-middleware": "1.8.4"
